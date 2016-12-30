@@ -1,0 +1,46 @@
+body {
+  padding-bottom: 20px;
+}
+.p-relative {
+  position: relative;
+}
+.result {
+  font-size: 32px;
+}
+.img-max-150 {
+  max-width: 150px;
+}
+.btn-info__l-r-margins {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.items-container {
+  text-align: center;
+}
+.col-sm-3 {
+  position: relative;
+  padding: 0;
+  margin-bottom: 10px;
+  transition: transform .15s ease-in-out;
+  border: 1px solid transparent; 
+  background: #fff;
+  cursor: pointer;
+}
+.col-sm-3:hover {
+  transform: scale(1.05);
+  box-shadow: 0 7px 15px rgba(0,0,0,.25);
+  border: 1px solid rgba(0,0,0,.15); 
+  z-index: 10;
+} 
+.items-left,
+.item,
+.item-price {
+  line-height: 40px;
+}
+@media (min-width: 992px){
+  .btn-success {
+    position: absolute;
+    top: 39px;  
+    right: 80px;
+  }
+}
