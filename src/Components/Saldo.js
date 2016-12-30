@@ -25,3 +25,10 @@ export default class Saldo extends Component {
 		)
 	}
 }
+
+Saldo.propTypes = {
+  money: React.PropTypes.number,
+  moneyBack: React.PropTypes.func,
+  lastPurchased: React.PropTypes.string,
+  onClick: React.PropTypes.func
+}

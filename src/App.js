@@ -109,4 +109,14 @@ class App extends Component {
   }
 }
 
+App.propTypes = {
+  items: React.PropTypes.array,
+  purchaseItem: React.PropTypes.func,
+  coins: React.PropTypes.array,
+  money: React.PropTypes.number,
+  addValue: React.PropTypes.func,
+  moneyBack: React.PropTypes.func,
+  lastPurchased: React.PropTypes.string
+}
+
 export default App;
