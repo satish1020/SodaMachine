@@ -62,7 +62,7 @@ class App extends Component {
     // console.log(e.target);
 
     if (howMany > 0 && isPurchaseAlowed && itemPrice > currentMoney) {
-      alert("Sorry, you don't have enough money :( ");
+      alert("It looks like you don't have enough money. Insert some coins.");
     } 
 
     if(!isPurchaseAlowed){
@@ -94,7 +94,7 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <h1 className="text-center">Vending machine app</h1>
-          <p className="well">Add money, purchase by clicking on item and have fun!</p>
+          <div className="alert alert-warning text-center" role="alert">Add money, purchase by clicking on item and have fun!</div>
           <Items  items={this.state.items} purchaseItem={this.purchaseItem} />
           <Saldo  coins={this.state.coins} 
                   money={this.state.money} 

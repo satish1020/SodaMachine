@@ -5,7 +5,7 @@ export default class BtnMoneyBack extends Component {
 		const {lastPurchased, moneyBack, money} = this.props; 
 		return (
 			lastPurchased || money ? <button onClick={moneyBack} className="btn btn-success">
-				Get your {lastPurchased ? `${lastPurchased} and ` : null} money 
+				Get your {lastPurchased ? `${lastPurchased.toLowerCase()} and ` : null} money 
 			</button> : null
 		)
 	} 
