@@ -102,7 +102,7 @@ class App extends Component {
                   moneyBack={this.moneyBack}
                   lastPurchased={this.state.justPurchased}
           />
-          <p className="text-right">Made with ♥ by <a href="http://danko-m.github.io/" target="_blank">Danko</a></p>
+          <p className="author">Made with ♥ by <a href="http://danko-m.github.io/" target="_blank">Danko</a></p>
         </div>
       </div>
     );

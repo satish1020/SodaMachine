@@ -26,18 +26,27 @@ body {
   background: #fff;
   cursor: pointer;
 }
-.col-sm-3:hover {
-  transform: scale(1.05);
-  box-shadow: 0 7px 15px rgba(0,0,0,.25);
-  border: 1px solid rgba(0,0,0,.15); 
-  z-index: 10;
-} 
 .items-left,
 .item,
 .item-price {
   line-height: 40px;
 }
+.author {
+  padding-top: 10px;
+  text-align: center;
+}
+@media (min-width: 768px){
+  .author {
+    text-align: right;    
+  }
+}
 @media (min-width: 992px){
+  .col-sm-3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 7px 15px rgba(0,0,0,.25);
+    border: 1px solid rgba(0,0,0,.15); 
+    z-index: 10;
+  } 
   .btn-success {
     position: absolute;
     top: 39px;  
