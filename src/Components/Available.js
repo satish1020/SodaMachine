@@ -5,3 +5,7 @@ export default function Available({money}){
 		<div className="result">${money}</div>			
 	)
 }
+
+Available.propTypes = {
+  money: React.PropTypes.number
+}

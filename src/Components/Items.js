@@ -24,3 +24,8 @@ export default class Items extends Component {
 		)
 	}
 }
+
+Items.propTypes = {
+  items: React.PropTypes.array,
+  purchaseItem: React.PropTypes.func
+}
