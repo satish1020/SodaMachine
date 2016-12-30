@@ -16,7 +16,7 @@ export default class Saldo extends Component {
 			)
 		return (
 			<div className="row text-center p-relative">
-			  <h4>insert coins</h4>
+			  <h3>Insert coins</h3>
 		  	{buttons}
 		  	<h3>Available:</h3>
 			  <Available money={money} />
