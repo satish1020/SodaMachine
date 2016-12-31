@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Available from './Available'
-import BtnMoneyBack from './BtnMoneyBack'
+import Available from './Available';
+import BtnMoneyBack from './BtnMoneyBack';
 
 
 export default class Saldo extends Component {
