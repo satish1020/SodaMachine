@@ -62,15 +62,14 @@ class App extends Component {
   }
 
   purchaseItem(e){
+    e.preventDefault();
     const currentState = this.state.items.slice(0);
     let isPurchaseAlowed = this.state.isPurchaseAlowed;
     let currentMoney = this.state.money;
-    const index = e.target.dataset.value;
+    const index = e.target.getAttribute('data-value');
     const howMany = currentState[index].itemCount;
     const whichItem = currentState[index].itemName;
     const itemPrice = currentState[index].itemPrice;
-
-    // console.log(e.target);
 
     if (howMany > 0 && isPurchaseAlowed && itemPrice > currentMoney) {
       alert("It looks like you don't have enough money. Insert some coins.");
