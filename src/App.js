@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Items from './Components/Items';
 import Saldo from './Components/Saldo';
 
-import './App.css';
+import './css/bootstrap.min.css'
+import './css/App.css';
 
 import twix from './img/twix.jpg';
 import coke from './img/coca-cola.jpg';
