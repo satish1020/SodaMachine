@@ -12,7 +12,7 @@ export default class Item extends Component {
 	      <img className="img-responsive center-block img-max-150" src={item.imgUrl} alt=".." title={`Purcase this ${item.itemName}`} data-value={i} />
 	      <div className="item bg-warning text-warning">{item.itemName}</div>
 	      <div className="item-price bg-info text-info">Price: ${item.itemPrice}</div>
-	      <a onClick={purchaseItem} data-value={i} className="purchaseBtn" href="#">&nbsp;</a>
+	      <a onClick={purchaseItem} data-value={i} className="purchaseBtn" href="#"></a>
 	    </div>
 		)
 	}

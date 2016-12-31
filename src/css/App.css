@@ -24,6 +24,7 @@ body {
   transition: transform .15s ease-in-out;
   border: 1px solid transparent; 
   background: #fff;
+  z-index: 0;
 }
 .items-left,
 .item,
@@ -37,7 +38,8 @@ body {
   bottom: 0;
   left: 0;
   display: block;
-  z-index: 10;
+  z-index: 5;
+  background-color: rgba(255,255,255,0); /* IE9-10*/
 }
 .author {
   padding-top: 10px;
@@ -53,8 +55,12 @@ body {
     transform: scale(1.05);
     box-shadow: 0 7px 15px rgba(0,0,0,.25);
     border: 1px solid rgba(0,0,0,.15); 
-    z-index: 10;
+    z-index: 1;
   } 
+  .col-sm-3:hover purchaseBtn {
+    z-index: 20;
+  }
+
   .btn-success {
     position: absolute;
     top: 56px;
