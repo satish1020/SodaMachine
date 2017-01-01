@@ -67,6 +67,7 @@ class App extends Component {
     const currentState = this.state.items.slice(0);
     const isPurchaseAlowed = this.state.isPurchaseAlowed;
     let currentMoney = this.state.money;
+    const justPurchased = this.state.justPurchased;
     const index = e.target.getAttribute('data-value');
     const howMany = currentState[index].itemCount;
     const whichItem = currentState[index].itemName;
@@ -77,7 +78,7 @@ class App extends Component {
     } 
 
     if(!isPurchaseAlowed){
-      alert("One item at a time please. Collect your item first, and then make new purchase.");
+      alert(`One item at a time please. Collect your ${justPurchased.toLowerCase()} first, and then make new purchase.`);
     }
 
      if( isPurchaseAlowed && howMany < 1){
