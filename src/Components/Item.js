@@ -9,10 +9,10 @@ export default class Item extends Component {
 					<div className="items-left bg-success text-success">Available items: {item.itemCount}</div> : 
 					<div className="items-left bg-danger text-danger">Out of stock</div>
 				}
-	      <img className="img-responsive center-block img-max-150" src={item.imgUrl} alt=".." title={`Purcase this ${item.itemName}`} data-value={i} />
+	      <img className="img-responsive center-block img-max-150" src={item.imgUrl} alt=".." />
 	      <div className="item bg-warning text-warning">{item.itemName}</div>
 	      <div className="item-price bg-info text-info">Price: ${item.itemPrice}</div>
-	      <a onClick={purchaseItem} data-value={i} className="purchaseBtn" href="#"></a>
+	      <a onClick={purchaseItem} data-value={i} className="btn-purchase" href="#"></a>
 	    </div>
 		)
 	}

@@ -42,6 +42,7 @@ class App extends Component {
   addValue(e){
     const currentValue = this.state.money;
     const isPurchaseAlowed = this.state.isPurchaseAlowed;
+    const justPurchased = this.state.justPurchased;
     const addedValue = parseFloat(e.target.value, 10);
     const newValue = currentValue + addedValue;    
 
@@ -50,7 +51,7 @@ class App extends Component {
         money: parseFloat(newValue.toFixed(2), 10)
       });      
     } else {
-      alert("One item at the time please. Collect your money first, and then make new purchase.");
+      alert(`One item at a time please. Collect your ${justPurchased.toLowerCase()} first, and then make new purchase.`);
     }
   }
 
@@ -102,7 +103,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="container">
-          <h1 className="text-center">Vending machine app <img src={logo} alt="" height="50"/></h1>
+          <h1 className="text-center">Vending machine app <img src={logo} alt=".." title="ReactJS" height="50"/></h1>
           <div className="alert alert-info text-center" role="alert">
             <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Add virtual money, purchase by clicking on item - and have fun!</div>
           <Items  items={this.state.items} purchaseItem={this.purchaseItem} />
@@ -112,7 +113,7 @@ class App extends Component {
                   moneyBack={this.moneyBack}
                   lastPurchased={this.state.justPurchased}
           />
-          <p className="author">Made with ♥ by <a href="http://danko-m.github.io/" target="_blank">Danko</a></p>
+          <p className="author">Made with <span className="text-danger">♥</span>/<img src={logo} alt=".." height="16" title="ReactJS" /> by <a href="http://danko-m.github.io/" target="_blank">Danko</a></p>
         </div>
       </div>
     );

@@ -43,7 +43,7 @@ body {
 .item-price {
   line-height: 40px;
 }
-.purchaseBtn {
+.btn-purchase {
   position: absolute;
   top: 0;
   right: 0;
@@ -71,7 +71,7 @@ body {
   } 
   .btn-success {
     position: absolute;
-    top: 56px;
+    top: 73px;
     right: 80px;
   }
 }
