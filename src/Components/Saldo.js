@@ -8,7 +8,7 @@ export default class Saldo extends Component {
 		const {coins, money, addValue, moneyBack, lastPurchased} = this.props;
 		const buttons = coins.map((item, i) => { 
 			return (
-						<button key={i} className="btn btn-info btn-info__l-r-margins" value={item} onClick={addValue}>
+						<button key={i} className="btn btn-warning btn-warning--coins" value={item} onClick={addValue}>
 							{item < 1 ? `${item*100 }¢` : `$${item}`}
 						</button>	
 					)
@@ -16,8 +16,8 @@ export default class Saldo extends Component {
 			)
 		return (
 			<div className="row text-center p-relative">
-			  <h3>Insert coins</h3>
-		  	{buttons}
+			  <h3>Coins:</h3>
+		  	<div className="coins">{buttons}</div>
 		  	<h3>Available:</h3>
 			  <Available money={money} />
 			  <BtnMoneyBack money={money} moneyBack={moneyBack} lastPurchased={lastPurchased} />
@@ -29,6 +29,5 @@ export default class Saldo extends Component {
 Saldo.propTypes = {
   money: React.PropTypes.number,
   moneyBack: React.PropTypes.func,
-  lastPurchased: React.PropTypes.string,
-  onClick: React.PropTypes.func
+  lastPurchased: React.PropTypes.string
 }

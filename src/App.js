@@ -77,7 +77,7 @@ class App extends Component {
     } 
 
     if(!isPurchaseAlowed){
-      alert("One item at a time please. Collect your money first, and then make new purchase.");
+      alert("One item at a time please. Collect your item first, and then make new purchase.");
     }
 
      if( isPurchaseAlowed && howMany < 1){
