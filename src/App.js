@@ -5,6 +5,7 @@ import Saldo from './Components/Saldo';
 import './css/bootstrap.min.css'
 import './css/App.css';
 
+import logo from './img/react.png';
 import twix from './img/twix.jpg';
 import coke from './img/coca-cola.jpg';
 import chocolate from './img/chocolate.jpg';
@@ -64,7 +65,7 @@ class App extends Component {
   purchaseItem(e){
     e.preventDefault();
     const currentState = this.state.items.slice(0);
-    let isPurchaseAlowed = this.state.isPurchaseAlowed;
+    const isPurchaseAlowed = this.state.isPurchaseAlowed;
     let currentMoney = this.state.money;
     const index = e.target.getAttribute('data-value');
     const howMany = currentState[index].itemCount;
@@ -76,7 +77,7 @@ class App extends Component {
     } 
 
     if(!isPurchaseAlowed){
-      alert("One item at the time please. Collect your money first, and then make new purchase.");
+      alert("One item at a time please. Collect your money first, and then make new purchase.");
     }
 
      if( isPurchaseAlowed && howMany < 1){
@@ -86,24 +87,21 @@ class App extends Component {
     if(isPurchaseAlowed && howMany > 0 && currentState[index].itemCount > 0 && itemPrice <= currentMoney){       
       currentState[index].itemCount -= 1;    
       currentMoney -= itemPrice;
-      isPurchaseAlowed = !isPurchaseAlowed;
 
       this.setState({
         items: currentState,
         money: parseFloat(currentMoney.toFixed(2), 10),
-        isPurchaseAlowed,
+        isPurchaseAlowed: !isPurchaseAlowed,
         justPurchased: whichItem 
       });
     }
-
-    // console.log("currentMoney: ", currentMoney, "howMany: ", howMany, "itemPrice: ", itemPrice, "whichItem: ", whichItem );
   }
 
   render() {
     return (
       <div className="App">
         <div className="container">
-          <h1 className="text-center">Vending machine app</h1>
+          <h1 className="text-center">Vending machine app <img src={logo} alt="" height="50"/></h1>
           <div className="alert alert-info text-center" role="alert">
             <span className="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Add virtual money, purchase by clicking on item - and have fun!</div>
           <Items  items={this.state.items} purchaseItem={this.purchaseItem} />

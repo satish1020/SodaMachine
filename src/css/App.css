@@ -57,10 +57,6 @@ body {
     border: 1px solid rgba(0,0,0,.15); 
     z-index: 1;
   } 
-  .col-sm-3:hover purchaseBtn {
-    z-index: 20;
-  }
-
   .btn-success {
     position: absolute;
     top: 56px;
