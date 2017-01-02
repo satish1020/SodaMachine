@@ -116,7 +116,10 @@ class App extends Component {
                   lastPurchased={this.state.justPurchased}
           >
             <Available money={this.state.money} />
-            <BtnMoneyBack money={this.state.money} moneyBack={this.moneyBack} lastPurchased={this.state.justPurchased} />
+            <BtnMoneyBack money={this.state.money} 
+                          moneyBack={this.moneyBack} 
+                          lastPurchased={this.state.justPurchased} 
+            />
           </Saldo>
           <p className="author">Made with <span className="text-danger">♥</span>/<img src={logo} alt=".." height="16" title="ReactJS" /> by <a href="http://danko-m.github.io/" target="_blank">Danko</a></p>
         </div>
