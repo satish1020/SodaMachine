@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Items from './Components/Items';
 import Saldo from './Components/Saldo';
+import Available from './Components/Available';
+import BtnMoneyBack from './Components/BtnMoneyBack';
 
 import './css/bootstrap.min.css'
 import './css/App.css';
@@ -112,7 +114,10 @@ class App extends Component {
                   addValue={this.addValue}
                   moneyBack={this.moneyBack}
                   lastPurchased={this.state.justPurchased}
-          />
+          >
+            <Available money={this.state.money} />
+            <BtnMoneyBack money={this.state.money} moneyBack={this.moneyBack} lastPurchased={this.state.justPurchased} />
+          </Saldo>
           <p className="author">Made with <span className="text-danger">♥</span>/<img src={logo} alt=".." height="16" title="ReactJS" /> by <a href="http://danko-m.github.io/" target="_blank">Danko</a></p>
         </div>
       </div>

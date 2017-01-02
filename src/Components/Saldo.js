@@ -5,7 +5,7 @@ import BtnMoneyBack from './BtnMoneyBack';
 
 export default class Saldo extends Component {
 	render(){
-		const {coins, money, addValue, moneyBack, lastPurchased} = this.props;
+		const {coins, money, addValue, moneyBack, lastPurchased, children} = this.props;
 		const buttons = coins.map((item, i) => { 
 			return (
 						<button key={i} className="btn btn-warning btn-warning--coins" value={item} onClick={addValue}>
@@ -19,8 +19,8 @@ export default class Saldo extends Component {
 			  <h3>Coins:</h3>
 		  	<div className="coins">{buttons}</div>
 		  	<h3>Money available:</h3>
-			  <Available money={money} />
-			  <BtnMoneyBack money={money} moneyBack={moneyBack} lastPurchased={lastPurchased} />
+			  {children}
+			  
 			</div>
 		)
 	}
