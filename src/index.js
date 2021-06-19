@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {SodaMachine} from './Container/SodaMachine';
-// import Sodamachine from './Container/vendingmachine';
+import Sodamachine from './Container/vendingmachine';
 import StopWatch from './Container/StopWatch';
 
 ReactDOM.render(
-  //<SodaMachine />,
-  // <Sodamachine />,
-  <StopWatch />,
+  <Sodamachine />,
+  // <StopWatch />,
   document.getElementById('root')
 );
