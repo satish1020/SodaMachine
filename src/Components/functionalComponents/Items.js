@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 import Item from './Item';
 
 
-export default class Items extends Component {
-	render(){		
+const Items= ()=>{		
 		const {items, purchaseItem} = this.props;
-		const allItems = items.map((item, i) => {
+		const allItems = items && items.map((item, i) => {
 			return (
 				<Item purchaseItem={purchaseItem} item={item} key={item.itemId} i={i} />
 		  )
@@ -16,7 +15,8 @@ export default class Items extends Component {
 		  </div>
 		)
 	}
-}
+
+export default Items;
 
 
 

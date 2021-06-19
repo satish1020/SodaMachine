@@ -1,21 +1,30 @@
 {
-  "name": "vending-machine",
-  "version": "0.0.1",
+  "name": "react",
+  "version": "0.0.0",
   "private": true,
-  "homepage": "https://danko-m.github.io/vending-machine-react/",
-  "devDependencies": {
-    "gh-pages": "^0.12.0",
-    "react-scripts": "0.8.4"
-  },
   "dependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "deploy": "npm run build&&gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

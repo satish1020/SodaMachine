@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-export default class Item extends Component {
-	render(){
+const Item = () => {
 		const {purchaseItem, item, i} = this.props;
 		return (
 			<div className="col-xs-6 col-sm-3">
@@ -16,4 +15,4 @@ export default class Item extends Component {
 	    </div>
 		)
 	}
-}
+export default Item;

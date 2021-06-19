@@ -5,7 +5,7 @@ export default function Items(){
 		<div className="row">
 	    <div className="col-xs-3">
 	      <div className="items-left">2</div>
-	      <div className="item">Twix</div>
+	      <div className="item">Hersheys</div>
 	      <div className="item-price">$1</div>
 	    </div>
 	    <div className="col-xs-3">
